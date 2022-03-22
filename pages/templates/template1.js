@@ -1,6 +1,7 @@
 // import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import React from 'react'
 
-export const Template1 = React.forwardRef(({data}, ref) => {
+const Template1 = React.forwardRef(({data}, ref) => {
 
     return(
         <>
