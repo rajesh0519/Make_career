@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function Form4({ data, setData, savedata }) {
+export function Form4({ data, setData, savedata }) {
 
   const [exp, setExp] = useState([ { name: "", duration: "" }, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
@@ -89,5 +89,4 @@ function Form4({ data, setData, savedata }) {
     </>
   )
 }
-
 export default Form4;
