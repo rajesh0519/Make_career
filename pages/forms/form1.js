@@ -1,6 +1,11 @@
 
 export function Form1({data ,setData , savedata}) {
 
+
+  if(!data) {
+  return null}
+  else{
+
   return (
     <>
     
@@ -55,6 +60,7 @@ export function Form1({data ,setData , savedata}) {
 
     </>
   )
+              }
 }
 
 export default Form1;
