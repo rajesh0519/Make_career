@@ -1,7 +1,6 @@
 
 export function Form1({data ,setData , savedata}) {
 
-
   return (
     <>
     
@@ -13,25 +12,25 @@ export function Form1({data ,setData , savedata}) {
               <span className="form_header">Personal Details -</span>
 
               <label className="label">Full Name :
-                <input className="input" type="text" name="name" placeholder="Enter your Full Name" value={data[0].name}
+                <input className="input" type="text" name="name" placeholder="Enter your Full Name" value={!data[0] ? "" : data[0].name}
                 onChange={(e)=> savedata(0,e.target.name,e.target.value)} required>
                 </input>
               </label>
               <label className="label">Email :
-                <input className="input" type="email" name="email" placeholder="Enter your Full Name" value={data[0].email}
+                <input className="input" type="email" name="email" placeholder="Enter your Full Name" value={!data[0] ? "" : data[0].email}
                 onChange={(e)=> savedata(0,e.target.name,e.target.value)} required></input>
               </label>
               <label className="label">Date of Birth :
-                <input className="input" type="date" name="dob" placeholder="Enter your Full Name" value={data[0].dob}
+                <input className="input" type="date" name="dob" placeholder="Enter your Full Name" value={!data[0] ? "" : data[0].dob}
                 onChange={(e)=> savedata(0,e.target.name,e.target.value)} required></input>
               </label>
               
               <label className="label">Contact Number :
-                <input className="input" type="tel" name="contact" placeholder="Enter your Full Name" value={data[0].contact}
+                <input className="input" type="tel" name="contact" placeholder="Enter your Full Name" value={!data[0] ? "" : data[0].contact}
                  onChange={(e)=> savedata(0,e.target.name,e.target.value)} required></input>
               </label>
               <label className="label">About me :
-                <textarea type="text" name="about" placeholder="Enter about yourself" value={data[0].about}
+                <textarea type="text" name="about" placeholder="Enter about yourself" value={!data[0] ? "" : data[0].about}
                 onChange={(e)=> savedata(0,e.target.name,e.target.value)} required></textarea>
               </label>
               <label className="label">Image : 
@@ -48,7 +47,7 @@ export function Form1({data ,setData , savedata}) {
                 }
                 } } required>
                 </input>
-                <img src={data[0].image}   alt=".." className="img_upload"></img>
+                <img src={ data[0].image ? data[0].image : ""}   alt=".." className="img_upload"></img>
               </label>
                 
          
