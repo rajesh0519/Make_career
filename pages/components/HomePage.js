@@ -118,7 +118,7 @@ export default function HomePage() {
           {/* Form Container */}
           <div className="form_container">
 
-              {
+              {/* {
                 (()=>{
                   switch(data[4].formNo)
                   {
@@ -138,8 +138,12 @@ export default function HomePage() {
                     default: break;
                   }
                 })()
-              }
+              } */}
 
+<Form1 data={data} setData = {setData} savedata={savedata}/>
+<Form2 data={data} setData = {setData} savedata={savedata}/>
+<Form3 data={data} setData = {setData} savedata={savedata}/>
+                    <Form4 data={data} setData = {setData} savedata={savedata}/>
               
 
             
