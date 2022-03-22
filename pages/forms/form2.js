@@ -8,6 +8,12 @@ export function Form2({data ,setData , savedata}) {
     setData({ ...data, [1]: { ...data[1], education:{...data[1].education , [index]:{...data[1].education[index], [dataName]: target}} } })
   }
 
+  if(!data) {
+    return null;
+  }
+  else{
+
+
     return (
       <>
       
@@ -65,5 +71,6 @@ export function Form2({data ,setData , savedata}) {
 
       </>
     )
+                          }
   }
   export default Form2;

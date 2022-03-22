@@ -9,6 +9,13 @@ export function Form4({ data, setData, savedata }) {
     setData({ ...data, [3]: { ...data[3], exp:{...data[3].exp , [index]:{...data[3].exp[index], [dataName]: target}} } })
   }
 
+
+  if(!data) {
+    return null;
+  }
+  else{
+
+
   return (
     <>
 
@@ -88,5 +95,6 @@ export function Form4({ data, setData, savedata }) {
 
     </>
   )
+        }
 }
 export default Form4;

@@ -3,6 +3,12 @@ import React from 'react'
 
 const Template1 = React.forwardRef(({data}, ref) => {
 
+    if(!data) {
+        return null;
+      }
+      else{
+    
+
     return(
         <>
 
@@ -112,7 +118,8 @@ const Template1 = React.forwardRef(({data}, ref) => {
             </div>
 
         </>
-    );
+    )
+                }
 });
 
 Template1.displayName = "Template1";

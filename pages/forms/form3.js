@@ -8,6 +8,13 @@ export function Form3({data ,setData , savedata}) {
       setData({ ...data, [2]: { ...data[2], skills:{...data[2].skills , [index]:{...data[2].skills[index], [dataName]: target}} } })
     }
    
+
+    if(!data) {
+      return null;
+    }
+    else{
+  
+
     return (
       <>
 
@@ -67,5 +74,6 @@ export function Form3({data ,setData , savedata}) {
       
       </>
     )
+                          }
   }
 export default Form3;
