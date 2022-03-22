@@ -1,5 +1,5 @@
 
-export default function Form1({data ,setData , savedata}) {
+function Form1({data ,setData , savedata}) {
 
 
   return (
@@ -57,3 +57,5 @@ export default function Form1({data ,setData , savedata}) {
     </>
   )
 }
+
+export default Form1;

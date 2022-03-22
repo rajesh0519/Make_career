@@ -1,6 +1,6 @@
 import { useState} from 'react'
 
-export default function Form2({data ,setData , savedata}) {
+function Form2({data ,setData , savedata}) {
 
   const [educ , setEduc] = useState([1,2,3,4,5,6,7,8])
 
@@ -66,3 +66,4 @@ export default function Form2({data ,setData , savedata}) {
       </>
     )
   }
+  export default Form2;
