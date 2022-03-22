@@ -1,13 +1,6 @@
 // import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-import React , {useRef} from 'react'
 
 export const Template1 = React.forwardRef(({data}, ref) => {
-
-
-const checkskill = (datas) => {
- 
-    return !datas.includes("Intermediate") & !datas.includes("Beginner") & !datas.includes("Expert") & datas !== ""
-    }
 
     return(
         <>
