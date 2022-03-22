@@ -1,0 +1,30 @@
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: grey;
+}
+.header_logo img {
+  width: 7rem;
+  height: 7rem;
+  margin: 1rem 1.5rem;
+}
+.header_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 5rem;
+}
+.header_nav h4 {
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.header_nav h4:hover {
+  color: black;
+  transition: all 0.5s ease-in-out;
+}

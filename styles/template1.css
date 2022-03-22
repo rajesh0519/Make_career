@@ -1,0 +1,154 @@
+.t1_container {
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: auto;
+  height: 120rem;
+  background: white;
+  /* margin: 2rem; */
+  border: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.p_circle {
+  width: 30rem;
+  height: 30rem;
+  background: #2465ab;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -15rem;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p_img {
+  width: 27rem;
+  height: 27rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.p_details {
+  background: #2465ab;
+  position: relative;
+  width: 30rem;
+  height: 100rem;
+  margin: 20rem 3rem;
+  padding: 4rem;
+  z-index: 2;
+  text-align: start;
+}
+.about_me {
+  margin-top: 14rem;
+}
+.p_details h3 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.p_details p {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.ed_header {
+  color: #fff;
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 1.8rem;
+}
+.ed_text {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.contact_header {
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  margin-top: 1.5rem;
+}
+.contact_text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7rem;
+  display: block;
+}
+
+.name_text {
+  font-size: 8rem;
+  color: #2465ab;
+  word-break: break-all;
+  line-height: 7.8rem;
+  word-spacing: 100vw;
+  text-transform: uppercase;
+  /* width: 100%; */
+}
+
+.pro_details {
+  position: relative;
+  width: 45rem;
+  height: 90rem;
+  margin: 7.5rem 0;
+  /* padding: 5rem; */
+  z-index: 2;
+}
+.pro_details h3 {
+  color: #2465ab;
+  font-size: 2.5rem;
+}
+/* .pro_details p {
+  color: #2465ab;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+
+.exp_details {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: grey;
+}
+.exp_headers {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+.exp_text {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.skills_container {
+  display: block;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+.skills_text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 3rem 1rem 0;
+}
+.skills_level {
+  font-size: 2rem;
+  position: absolute;
+  left: 60%;
+}
