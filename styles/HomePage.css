@@ -190,7 +190,9 @@
 
 @media screen and (max-width: 768px) {
   .form_container {
-    width: 50rem;
+    width: 55rem;
+    /* justify-content: center; */
+    align-items: center;
   }
   .form {
     width: 40rem;
@@ -201,16 +203,16 @@
     margin-bottom: 4rem;
   }
   .input {
-    width: 35rem;
+    width: 42rem;
     padding: 2.5rem;
     margin: 2rem 0 2rem;
   }
   .form_container textarea {
-    width: 35rem;
+    width: 42rem;
     margin-bottom: 2rem;
   }
   .upload_btn {
-    width: 35rem;
+    width: 42rem;
     height: 5rem;
   }
   .img_upload {
@@ -231,7 +233,7 @@
   .sub_input,
   .sub_degree {
     margin: 0rem;
-    width: 35rem;
+    width: 42rem;
     /* margin: 2rem; */
     display: block;
     padding: 1.5rem;
