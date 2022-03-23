@@ -6,17 +6,21 @@ export default function Header() {
 
         <div className="header_container">
             <div className="header_logo">
-                <img src="/favicon.ico" />
+                <img src="/rb_logo1.png"/>
             </div>
 
-            <div className="header_nav">
+            <div className="header_text">
+              <h1>Make_Career</h1>
+            </div>
+
+            {/* <div className="header_nav">
                 <Link href="/"><h4>Home</h4></Link>
                 <Link href="about/"><h4>About</h4></Link>
                 <Link href="/"><h4>Templates</h4></Link>
                 <Link href="/"><h4>Education</h4></Link>
                 <Link href="/"><h4>Contact</h4></Link>
 
-            </div>    
+            </div>     */}
         </div>
 
       </>

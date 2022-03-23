@@ -107,6 +107,7 @@
   margin: 7.5rem 0;
   /* padding: 5rem; */
   z-index: 2;
+  /* background: yellow; */
 }
 .pro_details h3 {
   color: #2465ab;
@@ -168,4 +169,27 @@
 .other_heading {
   margin-top: 5rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 60rem;
+  }
+  .p_circle {
+    width: 24rem;
+    height: 24rem;
+    top: -11rem;
+  }
+  .p_img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .p_details {
+    width: 24rem;
+    margin: 20rem 2rem;
+    padding: 2rem;
+  }
+  .pro_details {
+    width: 30rem;
+  }
 }

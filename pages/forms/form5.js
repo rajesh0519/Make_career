@@ -34,7 +34,8 @@ export function Form5({ data, setData, savedata }) {
                     <>
                       <label className="label" >Title : 
 
-                        <button onClick={(e) =>{e.preventDefault(); 
+                        <img src="/icons8-delete-64.png" className="del_btn"
+                         onClick={(e) =>{e.preventDefault(); 
                               let dataName = e.target.name;
                                 setData({...data,
                                   [4]: { ...data[4], 
@@ -42,8 +43,7 @@ export function Form5({ data, setData, savedata }) {
                                      [index]:{...data[4].other[index], title:"",text:""}}},
                                   [5]:{...data[5] , other_slice: data[5].other_slice - 1}})
                                 }}>
-                            Delete
-                          </button>
+                          </img>
 
                           <input type="text" className="input" placeholder="Project / Achievements / Interest "
                             onChange={e => setData({...data,
@@ -84,14 +84,13 @@ export function Form5({ data, setData, savedata }) {
 
         }
 
-                    <button className="add_btn"
+                    <img src="/icons8-add-64.png" className="add_btn"
                         onClick={(e) => {
                         e.preventDefault(); data[5].other_slice <= 4 ?
                             setData({ ...data, [5]: { ...data[5], other_slice: data[5].other_slice + 1 } })
                             : window.alert("Max Options Reached")
                         }}>
-                        Add More
-                    </button>
+                    </img>
         
       </form>
 

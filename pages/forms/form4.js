@@ -31,6 +31,17 @@ export function Form4({ data, setData, savedata }) {
                       return (
 
                         <label key={index} className="label">Company Name :
+
+                          <img src="/icons8-delete-64.png" className="del_btn" 
+                          onClick={(e) =>{e.preventDefault(); 
+                              let dataName = e.target.name;
+                                setData({...data,
+                                  [3]: { ...data[3], exp:{...data[3].exp ,
+                                     [index]:{...data[3].exp[index], name: "" , duration:"" ,post:"",work_profile:""}} },
+                                  [5]:{...data[5] , exp_slice: data[5].exp_slice - 1}})
+                                }}>
+                          </img>
+
                           <input className="input" type="text" placeholder="Write here..." 
                               value={ data[3].exp[index].name }
                               onChange={e => {saveExp(index,"name",e.target.value)}}
@@ -63,15 +74,7 @@ export function Form4({ data, setData, savedata }) {
                             </label>
 
                           
-                          <button onClick={(e) =>{e.preventDefault(); 
-                              let dataName = e.target.name;
-                                setData({...data,
-                                  [3]: { ...data[3], exp:{...data[3].exp ,
-                                     [index]:{...data[3].exp[index], name: "" , duration:"" ,post:"",work_profile:""}} },
-                                  [5]:{...data[5] , exp_slice: data[5].exp_slice - 1}})
-                                }}>
-                            Delete
-                          </button>
+                          
                         </label>
 
                       )
@@ -80,14 +83,13 @@ export function Form4({ data, setData, savedata }) {
         }
 
 
-        <button className="add_btn"
+        <img src="/icons8-add-64.png" className="add_btn"
           onClick={(e) => {
             e.preventDefault(); data[5].exp_slice <= 10 ?
               setData({ ...data, [5]: { ...data[5], exp_slice: data[5].exp_slice + 1 } })
               : window.alert("Max Options Reached")
           }}>
-          Add More
-        </button>
+        </img>
 
 
 

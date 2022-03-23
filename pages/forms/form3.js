@@ -28,7 +28,19 @@ export function Form3({data ,setData , savedata}) {
     { skills.slice(0,data[5].skill_slice).map( ( curElm, index) => (
     
     
-    <label key={index} className="label">Skills/Languages/Framework :
+    <label key={index} className="label">Skills Name :
+
+                    <img src="/icons8-delete-64.png" className="del_btn" 
+                        onClick={(e) =>{e.preventDefault(); 
+                          let dataName = e.target.name;
+                            setData({...data,
+                              [2]: { ...data[2], skills:{...data[2].skills ,
+                                [index]:{...data[2].skills[index], name: "" ,level:""}} },
+                              [5]:{...data[5] , skill_slice: data[5].skill_slice - 1}})
+                            }}
+                    >
+                    </img>
+
                     <input className="input" type="text" 
                     value={ data[2].skills[index].name }
                     onChange={e => {saveSkill(index,"name",e.target.value)}}
@@ -45,28 +57,17 @@ export function Form3({data ,setData , savedata}) {
                               <option  value="Expert">Expert</option>
                       </select>
                     </label>
-                    <button 
-                      onClick={(e) =>{e.preventDefault(); 
-                        let dataName = e.target.name;
-                          setData({...data,
-                            [2]: { ...data[2], skills:{...data[2].skills ,
-                              [index]:{...data[2].skills[index], name: "" ,level:""}} },
-                            [5]:{...data[5] , skill_slice: data[5].skill_slice - 1}})
-                          }}
-                    >
-                         Delete
-                    </button>
+                    
                    </label> 
     
     
     )) }
                
-                        <button className="add_btn" 
+                        <img src="/icons8-add-64.png" className="add_btn" 
                           onClick={(e)=>{e.preventDefault(); data[5].skill_slice <= 10 ? 
                           setData({...data, [5]:{...data[5] , skill_slice: data[5].skill_slice + 1}})
                           : window.alert("Max Options Reached")}}>
-                           Add More
-                        </button>
+                        </img>
 
                 
          

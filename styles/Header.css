@@ -1,14 +1,18 @@
 .header_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   background: grey;
 }
 .header_logo img {
-  width: 7rem;
-  height: 7rem;
-  margin: 1rem 1.5rem;
+  width: 8rem;
+  height: 6rem;
+  margin: 0.1rem;
+}
+.header_text h1 {
+  font-size: 4rem;
+  padding: 0.5rem;
 }
 .header_nav {
   display: flex;

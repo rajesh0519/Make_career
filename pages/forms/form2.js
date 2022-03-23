@@ -28,7 +28,17 @@ export function Form2({data ,setData , savedata}) {
                 educ.slice(0,data[5].educ_slice).map((curElm,index)=>{
                   return(
                     
-                      <label className="label" key={index}>Institute Name :
+                      <label className="label" key={index}>Institute Name : 
+                      <img src="/icons8-delete-64.png" className="del_btn"
+                          onClick={(e) =>{e.preventDefault(); 
+                            setData({...data,
+                              [1]: { ...data[1], education:{...data[1].education ,
+                                [index]:{...data[1].education[index], name: "" ,degree:""}} },
+                              [5]:{...data[5] , educ_slice: data[5].educ_slice - 1}})
+                            }}
+                        ></img>
+                  
+
                       <input className="input" type="text" name="school" placeholder="Enter your Details" 
                        value={ data[1].education[index].name }
                        onChange={e => {saveEducation(index,"name",e.target.value)}}
@@ -39,16 +49,7 @@ export function Form2({data ,setData , savedata}) {
                         onChange={e => {saveEducation(index,"degree",e.target.value)}}
                         ></input>
                         </label>
-                        <button 
-                      onClick={(e) =>{e.preventDefault(); 
-                          setData({...data,
-                            [1]: { ...data[1], education:{...data[1].education ,
-                              [index]:{...data[1].education[index], name: "" ,degree:""}} },
-                            [5]:{...data[5] , educ_slice: data[5].educ_slice - 1}})
-                          }}
-                    >
-                         Delete
-                    </button>
+                        
                       </label>
 
                   )
@@ -59,12 +60,11 @@ export function Form2({data ,setData , savedata}) {
               
 
               
-              <button className="add_btn" 
+                        <img src="/icons8-add-64.png" className="add_btn" 
                           onClick={(e)=>{e.preventDefault(); data[5].educ_slice <= 8 ? 
                           setData({...data, [5]:{...data[5] , educ_slice: data[5].educ_slice + 1}})
                           : window.alert("Max Options Reached")}}>
-                           Add More
-                        </button>
+                        </img>
                 
          
               </form>

@@ -39,8 +39,9 @@ export function Form1({data ,setData , savedata}) {
                 <textarea type="text" name="about" placeholder="Enter about yourself" value={data[0].about}
                 onChange={(e)=> savedata(0,e.target.name,e.target.value)} required></textarea>
               </label>
+                
               <label className="label">Image : 
-                <input className="input" type="file" accept="image/*" name="image" placeholder="Upload your photo here" 
+                <input className="upload_btn" type="file" accept="image/*" name="image" placeholder="Upload your photo here" 
                 onChange={(e)=>{
                   console.log(e.target.files[0]) 
                 const reader = new FileReader();
@@ -52,8 +53,7 @@ export function Form1({data ,setData , savedata}) {
                 }
                 }
                 } } required>
-                </input>
-                <img src={data[0].image}   alt=".." className="img_upload"></img>
+                </input><img src={data[0].image}   alt=".." className="img_upload"></img>
               </label>
                 
          
