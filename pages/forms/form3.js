@@ -52,9 +52,9 @@ export function Form3({data ,setData , savedata}) {
                       onChange={e => {saveSkill(index,"level",e.target.value)}}
                       > 
                               <option disabled value="select">Select option</option>
-                              <option value="Beginner">Beginner</option>
-                              <option value="Intermediate">Intermediate</option>
-                              <option  value="Expert">Expert</option>
+                              <option value="1">Beginner</option>
+                              <option value="2">Intermediate</option>
+                              <option  value="3">Expert</option>
                       </select>
                     </label>
                     

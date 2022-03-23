@@ -163,12 +163,31 @@
   top: 1rem;
 }
 .other_text {
-  font-size: 2rem;
+  font-size: 1.8rem;
   white-space: pre-wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .other_heading {
   margin-top: 5rem;
   text-transform: uppercase;
+}
+
+.slider_container {
+  /* margin-left: 15rem; */
+  position: absolute;
+  left: 40%;
+}
+.skill_slider {
+  /* -webkit-appearance: none; */
+  width: 20rem;
+  height: 2rem;
+  border-radius: 0;
+  background: red;
+}
+
+.skill_slider::-webkit-slider-thumb {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -189,7 +208,26 @@
     margin: 20rem 2rem;
     padding: 2rem;
   }
+  .p_details h3,
+  .pro_details h3 {
+    font-size: 2rem;
+  }
+
+  .name_text {
+    position: relative;
+    top: 1rem;
+  }
   .pro_details {
     width: 30rem;
+    margin: 9.5rem 0;
+  }
+  .slider_container {
+    left: 45%;
+  }
+  .skill_slider {
+    width: 15rem;
+  }
+  .other_text {
+    font-size: 1.5rem;
   }
 }

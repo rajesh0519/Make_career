@@ -113,16 +113,21 @@ const Template1 = React.forwardRef(({data}, ref) => {
                             return(
                                 <span className="skills_container" key={index}>
                                     <span className="skills_text">{data[2].skills[index].name !== "" ? data[2].skills[index].name 
-                                    : "Computer"}</span>
-                                    <span className="skills_level">{data[2].skills[index].level !== "" ? data[2].skills[index].level 
-                                    : " Beginner"}</span>
-                                </span>
+                                    : "Computer"}
+                                    </span>
+                                    
+                                    <span className="slider_container">
+                                      <input type="range" min="0" max="3" value={data[2].skills[index].level} className="skill_slider"></input>
+                                    </span>
+
+                                  </span>
                             )
                         }
                         )
                     }
 
-                    
+                  
+
                         {
                             Array.apply(null, {length: data[5].other_slice}).map((curElm,index)=>{
                                 return(
