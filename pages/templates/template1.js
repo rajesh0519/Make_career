@@ -1,6 +1,7 @@
 // import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import React from 'react'
 
+
 const Template1 = React.forwardRef(({data}, ref) => {
 
     if(!data) {
@@ -11,6 +12,9 @@ const Template1 = React.forwardRef(({data}, ref) => {
 
     return(
         <>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
 
             <div ref={ref} className="t1_container">
                 <div className="container">
@@ -30,7 +34,7 @@ const Template1 = React.forwardRef(({data}, ref) => {
                         <hr />
 
                         {
-                            Array.apply(null, {length: data[4].educ_slice}).map((curElm,index)=>{
+                            Array.apply(null, {length: data[5].educ_slice}).map((curElm,index)=>{
                                 return(
                                     <>
                                     <span  key={index}>
@@ -46,19 +50,26 @@ const Template1 = React.forwardRef(({data}, ref) => {
                             })
                         }
 
-                        
 
                         <h3>CONTACT</h3>
                         <hr />
 
-                        <span className="contact_header">CONTACT NUMBER : </span>
+                        <span className="contact_header"><img src="/icons8-mail-50.png" className="icon" /> : 
                         <span className="contact_text">{data[0].contact ? data[0].contact : "1234567890"}</span>
+                        </span>
+                        
+                        <br />
 
-                        <span className="contact_header">EMAIL ID : </span>
+                        <span className="contact_header"><img src="/icons8-call-50.png" className="icon" />  : 
                         <span className="contact_text">{data[0].email ? data[0].email : "demo@gmail.com"}</span>
+                        </span>
 
-                        <span className="contact_header">DATE OF BIRTH : </span>
+                        <br />
+
+                        <span className="contact_header"><img src="/icons8-birth-date-50.png" className="icon" />  : 
                         <span className="contact_text">{data[0].dob ? data[0].dob : "2000-01-01"}</span>
+                        </span>
+
                     </div>
 
                     <div className="pro_details">
@@ -70,7 +81,7 @@ const Template1 = React.forwardRef(({data}, ref) => {
 
                     {
                      
-                     Array.apply(null, {length: data[4].exp_slice}).map((curElm,index)=>{
+                     Array.apply(null, {length: data[5].exp_slice}).map((curElm,index)=>{
                             return(
                                 <>
                                     <span key={index}>
@@ -98,7 +109,7 @@ const Template1 = React.forwardRef(({data}, ref) => {
                     <hr />
                     
                     {
-                        Array.apply(null, {length: data[4].skill_slice}).map((curElm,index)=>{
+                        Array.apply(null, {length: data[5].skill_slice}).map((curElm,index)=>{
                             return(
                                 <span className="skills_container" key={index}>
                                     <span className="skills_text">{data[2].skills[index].name !== "" ? data[2].skills[index].name 
@@ -111,6 +122,29 @@ const Template1 = React.forwardRef(({data}, ref) => {
                         )
                     }
 
+                    
+                        {
+                            Array.apply(null, {length: data[5].other_slice}).map((curElm,index)=>{
+                                return(
+                                    <>
+                                        {
+                                            data[4].other[index].title === "" ? "" : 
+                                            <>
+                                            <h3 className="other_heading">{data[4].other[index].title}</h3>
+                                            <hr />
+                                            <span className="other_text">
+                                                {data[4].other[index].text}
+                                            </span>
+                                            </>
+                                            
+                                        }
+                                        
+                                    </>
+                                )
+                            })
+                        }
+
+                        
 
                     </div>
 

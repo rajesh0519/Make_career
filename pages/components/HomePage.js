@@ -4,6 +4,8 @@ import Form1 from '../forms/form1'
 import Form2 from '../forms/form2'
 import Form3 from '../forms/form3'
 import Form4 from '../forms/form4'
+import Form5 from '../forms/form5'
+
 import Template1 from '../templates/template1'
 
 import { useReactToPrint } from 'react-to-print';
@@ -60,11 +62,21 @@ export default function HomePage() {
       ]
  
   },
+  {other:[
+    {title: "",text:""},
+    {title: "",text:""},
+    {title: "",text:""},
+    {title: "",text:""},
+    {title: "",text:""},
+  ]
+  },
     {formNo: 0,
       educ_slice:1,
     skill_slice:1,
     exp_slice:1,
-  }
+    other_slice:1,
+  },
+  
 ]);
 
   const savedata = (index,dataName , target , id) => {
@@ -117,10 +129,10 @@ export default function HomePage() {
 
           {/* Form Container */}
           <div className="form_container">
-
+                <span className="formNo_text">{data[5].formNo + 1 +  " / " + " 5 "}</span>
               {
                 (()=>{
-                  switch(data[4].formNo)
+                  switch(data[5].formNo)
                   {
                     case 0:
                     return <Form1 data={data} setData = {setData} savedata={savedata}/>
@@ -133,6 +145,9 @@ export default function HomePage() {
                     break;
                     case 3:
                     return <Form4 data={data} setData = {setData} savedata={savedata}/>
+                    break;
+                    case 4:
+                    return <Form5 data={data} setData = {setData} savedata={savedata}/>
                     break;
 
                     default: break;
@@ -147,20 +162,20 @@ export default function HomePage() {
                {/* Button Container */}
                 <div className="btn_container">
 
-                    {data[4].formNo === 0 ?
+                    {data[5].formNo === 0 ?
                       ""
                       :
                       <button className="prev_btn"
-                        onClick={(e)=>{e.preventDefault(); data[4].formNo !== 0 ? changeForm(4,"sub") : window.alert("Nothings There!")}}>
+                        onClick={(e)=>{e.preventDefault(); data[5].formNo !== 0 ? changeForm(5,"sub") : window.alert("Nothings There!")}}>
                         Prev</button>
                     }
 
-                    {data[4].formNo === 3
+                    {data[5].formNo === 4
                       ?
                         ""
                         :
                         <button className="next_btn" 
-                        onClick={(e)=>{e.preventDefault(); data[4].formNo < 3 ? changeForm(4,"add") : window.alert("Please Submit")}}>
+                        onClick={(e)=>{e.preventDefault(); data[5].formNo < 4 ? changeForm(5,"add") : window.alert("Please Submit")}}>
                         Next
                         </button>
                     }
@@ -169,11 +184,11 @@ export default function HomePage() {
                 </div>
 
                 {/* Submit Button */}
-                {data[4].formNo === 3?
+                {/* {data[5].formNo === 3?
                 <input type="submit" value="Submit" className="submit_btn"></input>
                 :
                 ""
-                }  
+                }   */}
           
           </div>
 

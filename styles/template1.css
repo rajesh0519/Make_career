@@ -78,15 +78,16 @@
 
 .contact_header {
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1.3rem;
   display: block;
-  margin-top: 1.5rem;
 }
 .contact_text {
   color: #fff;
   font-weight: bold;
   font-size: 1.7rem;
-  display: block;
+  margin-left: 1rem;
+  /* display: block; */
 }
 
 .name_text {
@@ -151,4 +152,20 @@
   font-size: 2rem;
   position: absolute;
   left: 60%;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  position: relative;
+  top: 1rem;
+}
+.other_text {
+  font-size: 2rem;
+  white-space: pre-wrap;
+}
+.other_heading {
+  margin-top: 5rem;
+  text-transform: uppercase;
 }

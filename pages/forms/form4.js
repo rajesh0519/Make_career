@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 export function Form4({ data, setData, savedata }) {
 
-  const [exp, setExp] = useState([ { name: "", duration: "" }, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const [exp, setExp] = useState([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
   const saveExp = (index,dataName, target) => {
     // console.log(dataName);
@@ -27,7 +27,7 @@ export function Form4({ data, setData, savedata }) {
 
         {
           
-          exp.slice(0, data[4].exp_slice).map((curElm, index) => {
+          exp.slice(0, data[5].exp_slice).map((curElm, index) => {
                       return (
 
                         <label key={index} className="label">Company Name :
@@ -68,7 +68,7 @@ export function Form4({ data, setData, savedata }) {
                                 setData({...data,
                                   [3]: { ...data[3], exp:{...data[3].exp ,
                                      [index]:{...data[3].exp[index], name: "" , duration:"" ,post:"",work_profile:""}} },
-                                  [4]:{...data[4] , exp_slice: data[4].exp_slice - 1}})
+                                  [5]:{...data[5] , exp_slice: data[5].exp_slice - 1}})
                                 }}>
                             Delete
                           </button>
@@ -82,8 +82,8 @@ export function Form4({ data, setData, savedata }) {
 
         <button className="add_btn"
           onClick={(e) => {
-            e.preventDefault(); data[4].exp_slice <= 10 ?
-              setData({ ...data, [4]: { ...data[4], exp_slice: data[4].exp_slice + 1 } })
+            e.preventDefault(); data[5].exp_slice <= 10 ?
+              setData({ ...data, [5]: { ...data[5], exp_slice: data[5].exp_slice + 1 } })
               : window.alert("Max Options Reached")
           }}>
           Add More

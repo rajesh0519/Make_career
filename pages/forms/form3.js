@@ -25,7 +25,7 @@ export function Form3({data ,setData , savedata}) {
               <span className="form_header">Skills -</span>
 
    
-    { skills.slice(0,data[4].skill_slice).map( ( curElm, index) => (
+    { skills.slice(0,data[5].skill_slice).map( ( curElm, index) => (
     
     
     <label key={index} className="label">Skills/Languages/Framework :
@@ -51,7 +51,7 @@ export function Form3({data ,setData , savedata}) {
                           setData({...data,
                             [2]: { ...data[2], skills:{...data[2].skills ,
                               [index]:{...data[2].skills[index], name: "" ,level:""}} },
-                            [4]:{...data[4] , skill_slice: data[4].skill_slice - 1}})
+                            [5]:{...data[5] , skill_slice: data[5].skill_slice - 1}})
                           }}
                     >
                          Delete
@@ -62,8 +62,8 @@ export function Form3({data ,setData , savedata}) {
     )) }
                
                         <button className="add_btn" 
-                          onClick={(e)=>{e.preventDefault(); data[4].skill_slice <= 10 ? 
-                          setData({...data, [4]:{...data[4] , skill_slice: data[4].skill_slice + 1}})
+                          onClick={(e)=>{e.preventDefault(); data[5].skill_slice <= 10 ? 
+                          setData({...data, [5]:{...data[5] , skill_slice: data[5].skill_slice + 1}})
                           : window.alert("Max Options Reached")}}>
                            Add More
                         </button>

@@ -25,7 +25,7 @@ export function Form2({data ,setData , savedata}) {
               <span className="form_header">Education Background -</span>
 
               {
-                educ.slice(0,data[4].educ_slice).map((curElm,index)=>{
+                educ.slice(0,data[5].educ_slice).map((curElm,index)=>{
                   return(
                     
                       <label className="label" key={index}>Institute Name :
@@ -44,7 +44,7 @@ export function Form2({data ,setData , savedata}) {
                           setData({...data,
                             [1]: { ...data[1], education:{...data[1].education ,
                               [index]:{...data[1].education[index], name: "" ,degree:""}} },
-                            [4]:{...data[4] , educ_slice: data[4].educ_slice - 1}})
+                            [5]:{...data[5] , educ_slice: data[5].educ_slice - 1}})
                           }}
                     >
                          Delete
@@ -60,8 +60,8 @@ export function Form2({data ,setData , savedata}) {
 
               
               <button className="add_btn" 
-                          onClick={(e)=>{e.preventDefault(); data[4].educ_slice <= 8 ? 
-                          setData({...data, [4]:{...data[4] , educ_slice: data[4].educ_slice + 1}})
+                          onClick={(e)=>{e.preventDefault(); data[5].educ_slice <= 8 ? 
+                          setData({...data, [5]:{...data[5] , educ_slice: data[5].educ_slice + 1}})
                           : window.alert("Max Options Reached")}}>
                            Add More
                         </button>
