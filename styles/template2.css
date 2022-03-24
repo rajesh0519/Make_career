@@ -1,0 +1,263 @@
+.t2_container {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 hr {
+  display: none;
+}
+.container2 {
+  width: 80rem;
+  height: 120rem;
+  background: white;
+  /* margin: 2rem; */
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.name_text2 {
+  position: relative;
+  margin-top: 16rem;
+  font-size: 4rem;
+  color: rgb(63, 59, 59);
+  /* word-break: break-all; */
+  line-height: 5rem;
+  word-spacing: 100vw;
+  font-weight: normal;
+  text-transform: uppercase;
+  /* width: 100%; */
+  /* text-align: center; */
+}
+
+.p_details2 {
+  /* background: #2465ab; */
+  border: 2px solid #767b7d;
+  position: relative;
+  width: 38rem;
+  min-height: 100rem;
+  margin: 8rem 5rem;
+  padding: 2.5rem;
+  z-index: 2;
+  text-align: start;
+}
+
+.p_details2 h3,
+.pro_details2 h3 {
+  color: black;
+  font-size: 2.5rem;
+  position: relative;
+  margin-top: 5rem;
+}
+.p_details2 p,
+.pro_details2 p {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* font-size: 1.4rem; */
+  width: 85%;
+}
+
+.p_circle2 {
+  width: 18rem;
+  height: 18rem;
+  background: transparent;
+  display: block;
+  border: 1rem solid white;
+  /* border-radius: 50%; */
+  position: absolute;
+  top: -3.2rem;
+  left: 6.5rem;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p_img2 {
+  width: 22rem;
+  height: 22rem;
+  background: red;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  position: absolute;
+  top: -5rem;
+  left: 4.5rem;
+  z-index: -1;
+}
+
+.icon2 {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 1rem;
+}
+.contact_header2 {
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 1.3rem;
+  display: block;
+}
+.contact_text2 {
+  color: black;
+  font-weight: light;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  /* display: block; */
+}
+.skills_container2 {
+  display: block;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+.skills_text2 {
+  font-size: 1.3rem;
+  font-weight: medium;
+  margin: 2rem 3rem 2rem 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.skills_level2 {
+  font-size: 2rem;
+  position: absolute;
+  /* left: 60%; */
+}
+.slider_container2 {
+  /* margin-left: 15rem; */
+  position: relative;
+  display: block;
+  margin: 0.2rem 0;
+  /* left: 40%; */
+}
+.skill_slider2 {
+  /* -webkit-appearance: none; */
+  width: 20rem;
+  /* display: block; */
+  height: 2rem;
+  border-radius: 0;
+  background: red;
+}
+
+.skill_slider2::-webkit-slider-thumb {
+  visibility: hidden;
+}
+
+.pro_details2 {
+  position: relative;
+  width: 50rem;
+  height: 90rem;
+  margin: 3rem 0;
+  /* padding: 5rem; */
+  z-index: 2;
+  /* background: yellow; */
+}
+.pro_details h3 {
+  color: #2465ab;
+  font-size: 2.5rem;
+}
+
+.about_me2 {
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+.ed_header2 {
+  color: grey;
+  font-size: 1.5rem;
+  display: block;
+  font-weight: bold;
+  margin-top: 2.8rem;
+}
+.ed_text2 {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: medium;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+.exp_details2 {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: grey;
+}
+.exp_headers2 {
+  display: block;
+  font-size: 2rem;
+  font-weight: medium;
+  margin: 0.5rem 0 1rem;
+}
+.exp_text2 {
+  display: block;
+  font-size: 1.4rem;
+  width: 80%;
+  white-space: pre-wrap;
+}
+
+.other_text2 {
+  font-size: 1.8rem;
+  white-space: pre-wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.other_heading2 {
+  margin-top: 5rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .container2 {
+    width: 60rem;
+  }
+  .p_circle2 {
+    width: 15rem;
+    height: 15rem;
+    left: 5.3rem;
+    /* top: 11rem; */
+  }
+  .p_img2 {
+    width: 18rem;
+    height: 18rem;
+    left: 3.9rem;
+  }
+  .p_details2 {
+    width: 27rem;
+    margin: 8rem 2rem;
+    padding: 2rem;
+  }
+  .p_details2 h3,
+  .pro_details2 h3 {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+
+  .name_text2 {
+    position: relative;
+    margin-top: 13rem;
+    /* top: 1rem;    */
+  }
+
+  .contact_text2 {
+    font-size: 1.4rem;
+  }
+
+  .pro_details2 {
+    width: 30rem;
+    margin: 4rem 0 0;
+  }
+
+  .skill_slider2 {
+    width: 20rem;
+  }
+  .other_text2 {
+    font-size: 1.5rem;
+  }
+}

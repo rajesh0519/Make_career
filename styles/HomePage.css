@@ -188,6 +188,14 @@
   width: 20rem;
 }
 
+.templates_slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin: 5rem; */
+}
+
 @media screen and (max-width: 768px) {
   .form_container {
     width: 55rem;

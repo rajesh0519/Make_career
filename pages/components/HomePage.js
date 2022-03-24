@@ -7,6 +7,8 @@ import Form4 from '../forms/form4'
 import Form5 from '../forms/form5'
 
 import Template1 from '../templates/template1'
+import Template2 from '../templates/template2'
+
 
 import { useReactToPrint } from 'react-to-print';
 
@@ -78,6 +80,7 @@ export default function HomePage() {
   },
   
 ]);
+const [templateNo , setTemplateNo] = useState(0);
 
   const savedata = (index,dataName , target , id) => {
     if(!id){
@@ -193,12 +196,21 @@ export default function HomePage() {
           </div>
 
           <div className="template_container">
-          
+          <div className="template_changer">
+            <button onClick={()=>setTemplateNo(0)} >Template - 1</button>
+            <button onClick={()=>setTemplateNo(1)} >Template - 2</button>
+
+          </div>
+
           <div className="download_container">
                 <button onClick={handlePrint}>Download!</button>
             </div>
-            <Template1 data={data} ref={componentRef}/>
-            {/* Helol */}
+            {
+              templateNo === 0 ? <Template1 data={data} ref={componentRef}/> 
+              : <Template2 data={data} ref={componentRef}/>
+            }
+            
+
           </div>
 
         </div>

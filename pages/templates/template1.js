@@ -54,13 +54,13 @@ const Template1 = React.forwardRef(({data}, ref) => {
                         <h3>CONTACT</h3>
                         <hr />
 
-                        <span className="contact_header"><img src="/icons8-mail-50.png" className="icon" /> : 
+                        <span className="contact_header"><img src="/icons8-call-50.png" className="icon" /> : 
                         <span className="contact_text">{data[0].contact ? data[0].contact : "1234567890"}</span>
                         </span>
                         
                         <br />
 
-                        <span className="contact_header"><img src="/icons8-call-50.png" className="icon" />  : 
+                        <span className="contact_header"><img src="/icons8-mail-50.png" className="icon" />  : 
                         <span className="contact_text">{data[0].email ? data[0].email : "demo@gmail.com"}</span>
                         </span>
 
